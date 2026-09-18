@@ -35,6 +35,10 @@ My focus is not just generating model responses, but turning a real business pro
 
 ### [AI Content Pipeline for n8n](https://github.com/ivannyyyy/ai-content-pipeline-n8n)
 
+<p align="center">
+  <img src="./assets/content-pipeline-pixel.png" width="100%" alt="AI Content Pipeline — generation, quality control and publishing workflow" />
+</p>
+
 An AI-powered content production pipeline split into independent workflows:
 
 ```text
