@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/profile-banner.gif" width="100%" alt="Ivan Borovskikh — AI Automation Engineer" />
+</p>
+
 <div align="center">
 
 # Ivan Borovskikh
