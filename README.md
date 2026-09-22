@@ -31,7 +31,7 @@ My focus is not just generating model responses, but turning a real business pro
 - **Human-in-the-loop systems** — escalation to an administrator when the model does not have enough information
 - **AI content systems** — generation, quality control, asset processing and automated publishing
 
-## Featured Project
+## Featured Projects
 
 ### [AI Content Pipeline for n8n](https://github.com/ivannyyyy/ai-content-pipeline-n8n)
 
@@ -56,6 +56,38 @@ Telegram / MAX
 ```
 
 The production version was built for channels with a combined audience of **1M+** and automated the main content-production stages, reducing manual operations by **80–90%**.
+
+---
+
+### [Human-in-the-Loop Telegram AI Assistant](https://github.com/ivannyyyy/telegram-ai-assistant-n8n)
+
+<p align="center">
+  <img src="./assets/telegram-ai-assistant-pixel.png" width="100%" alt="Telegram AI Assistant — stateful dialogue, memory and human escalation" />
+</p>
+
+A stateful AI assistant that can initiate task-driven Telegram conversations, preserve dialogue context, route model decisions through deterministic workflow logic and escalate missing information to an administrator before continuing.
+
+```text
+Admin task setup
+      ↓
+First outreach
+      ↓
+State + memory
+      ↓
+Incoming dialogue
+      ↓
+Known context ───────────→ Continue conversation
+      │
+      └─ Missing context → Human escalation
+                              ↓
+                         Admin answer
+                              ↓
+                         Resume dialogue
+                              ↓
+                        Result / insights
+```
+
+**Core stack:** n8n · Airtable · PostgreSQL · OpenAI · Telegram / TelePilot · Cloudinary
 
 ## Technologies
 
