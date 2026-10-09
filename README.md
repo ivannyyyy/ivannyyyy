@@ -62,32 +62,31 @@ The production version was built for channels with a combined audience of **1M+*
 ### [Human-in-the-Loop Telegram AI Assistant](https://github.com/ivannyyyy/telegram-ai-assistant-n8n)
 
 <p align="center">
-  <img src="./assets/telegram-ai-assistant-pixel.png" width="100%" alt="Telegram AI Assistant — stateful dialogue, memory and human escalation" />
+  <img src="./assets/telegram-ai-assistant-pixel.png" width="100%" alt="Telegram AI Assistant — durable events, stateful dialogue and human escalation" />
 </p>
 
-A stateful AI assistant that can initiate task-driven Telegram conversations, preserve dialogue context, route model decisions through deterministic workflow logic and escalate missing information to an administrator before continuing.
+A task-driven Telegram AI assistant with **two preserved architecture iterations**. The repository shows the evolution from a workflow-centric v1 to a v2 runtime built around durable PostgreSQL events, explicit messages/facts/owner requests, deterministic Agent Core routing and asynchronous human escalation.
 
 ```text
-Admin task setup
-      ↓
-First outreach
-      ↓
-State + memory
-      ↓
-Incoming dialogue
-      ↓
-Known context ───────────→ Continue conversation
-      │
-      └─ Missing context → Human escalation
-                              ↓
-                         Admin answer
-                              ↓
-                         Resume dialogue
-                              ↓
-                        Result / insights
+v1
+workflow orchestration around an LLM
+        ↓
+known runtime limitations
+        ↓
+architecture redesign
+        ↓
+v2
+durable event queue
++ explicit runtime state
++ async human-in-the-loop
++ reconciliation & completion workers
 ```
 
-**Core stack:** n8n · Airtable · PostgreSQL · OpenAI · Telegram / TelePilot · Cloudinary
+The public project contains **18 sanitized n8n workflows**: 11 from v1 and 7 from the completed v2 redesign.
+
+**v2 highlights:** `FOR UPDATE SKIP LOCKED` event claiming · task/dialog state separation · confirmed facts with scoped reuse · non-blocking owner requests · Telegram routing guards · durable completion notifications · PostgreSQL file cache
+
+**Core stack:** n8n · Airtable · PostgreSQL · OpenAI · Telegram / TelePilot · Cloudinary (v1)
 
 ## Technologies
 
