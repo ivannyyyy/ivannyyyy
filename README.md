@@ -88,13 +88,37 @@ The public project contains **18 sanitized n8n workflows**: 11 from v1 and 7 fro
 
 **Core stack:** n8n · Airtable · PostgreSQL · OpenAI · Telegram / TelePilot · Cloudinary (v1)
 
+---
+
+### [Retrieval & RAG Patterns with n8n](https://github.com/ivannyyyy/n8n-retrieval-rag-patterns)
+
+A compact retrieval-focused project showing when to use deterministic SQL lookup and when to use a full RAG pipeline for unstructured documents.
+
+```text
+Structured data → PostgreSQL tool → deterministic lookup
+
+Unstructured docs
+        ↓
+chunking + embeddings
+        ↓
+PGVector + PostgreSQL FTS
+        ↓
+merge + deduplicate
+        ↓
+Cohere rerank
+        ↓
+grounded answer with sources
+```
+
+**Highlights:** RAG · PGVector · OpenAI embeddings · hybrid retrieval · PostgreSQL full-text search · Cohere reranking · document ingestion · source attribution
+
 ## Technologies
 
 | Area | Tools & technologies |
 |---|---|
-| **AI & LLM** | OpenAI API, Gemini API, AI agents, prompt engineering, structured output, context engineering |
+| **AI & LLM** | OpenAI API, Gemini API, AI agents, RAG, embeddings, hybrid retrieval, reranking, prompt engineering, structured output, context engineering |
 | **Automation** | n8n, workflow orchestration, scheduling, event and error handling |
-| **Backend & data** | Python — basic level & scripts, SQL — basic queries, PostgreSQL, Supabase, Airtable |
+| **Backend & data** | Python — basic level & scripts, SQL — basic queries, PostgreSQL, PGVector, Supabase, Airtable |
 | **Integrations** | REST API, HTTP, JSON, webhooks, Telegram integrations, Cloudinary, Google Drive |
 | **Agent tooling** | MCP tools and integrations |
 | **Generative workflows** | AI image & video pipelines |
