@@ -90,6 +90,42 @@ The public project contains **18 sanitized n8n workflows**: 11 from v1 and 7 fro
 
 ---
 
+### [Telegram AI Content Platform](https://github.com/ivannyyyy/telegram-ai-content-platform-n8n)
+
+<p align="center">
+  <img src="./assets/telegram-ai-content-platform.png" width="100%" alt="Telegram AI Content Platform — multilingual bot, payments, referrals, queue, GPU generation and delivery" />
+</p>
+
+A multilingual Telegram product for scenario-driven AI content generation. The platform combines user accounts, balance and payment flows, referral rewards, database-driven localization, persistent PostgreSQL state, queued GPU generation and asynchronous result delivery.
+
+```text
+Telegram user
+      ↓
+Bot Core + localized UI
+      ↓
+scenario + reference
+      ↓
+PostgreSQL state
+      ↓
+Redis job queue
+      ↓
+GPU / ComfyUI generation
+      ↓
+completion callback
+      ↓
+result delivery to user
+
+Payment callback
+      ↓
+user balance + referral reward
+```
+
+**Highlights:** multilingual UI · payments · token balance · referral system · PostgreSQL state · Redis queue · asynchronous GPU generation · ComfyUI · webhooks · object storage
+
+**Public release:** NDA-safe portfolio version in progress; production identities, endpoints, credentials, pricing and commercial coefficients are excluded.
+
+---
+
 ### [Retrieval & RAG Patterns with n8n](https://github.com/ivannyyyy/n8n-retrieval-rag-patterns)
 
 A compact retrieval-focused project showing when to use deterministic SQL lookup and when to use a full RAG pipeline for unstructured documents.
@@ -117,11 +153,11 @@ grounded answer with sources
 | Area | Tools & technologies |
 |---|---|
 | **AI & LLM** | OpenAI API, Gemini API, AI agents, RAG, embeddings, hybrid retrieval, reranking, prompt engineering, structured output, context engineering |
-| **Automation** | n8n, workflow orchestration, scheduling, event and error handling |
-| **Backend & data** | Python — basic level & scripts, SQL — basic queries, PostgreSQL, PGVector, Supabase, Airtable |
-| **Integrations** | REST API, HTTP, JSON, webhooks, Telegram integrations, Cloudinary, Google Drive |
+| **Automation** | n8n, workflow orchestration, scheduling, queues, webhooks, event and error handling |
+| **Backend & data** | Python — basic level & scripts, SQL — basic queries, PostgreSQL, PGVector, Redis, Supabase, Airtable |
+| **Integrations** | REST API, HTTP, JSON, webhooks, Telegram integrations, payment callbacks, object storage, Cloudinary, Google Drive |
 | **Agent tooling** | MCP tools and integrations |
-| **Generative workflows** | AI image & video pipelines |
+| **Generative workflows** | AI image & video pipelines, GPU generation workflows, ComfyUI integration |
 
 ## How I approach automation
 
