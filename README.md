@@ -27,9 +27,9 @@ My focus is not just generating model responses, but turning a real business pro
 - **AI agents & LLM workflows** — roles, goals, rules, context, structured output and state routing
 - **Workflow automation** — scheduled and event-driven pipelines, retries and error handling
 - **Integrations** — REST API, HTTP, JSON, webhooks, Telegram and external services
-- **Data & state** — PostgreSQL, Supabase, Airtable, conversation history and document flows
+- **Data & state** — PostgreSQL, Redis, Supabase, Airtable, conversation history and document flows
 - **Human-in-the-loop systems** — escalation to an administrator when the model does not have enough information
-- **AI content systems** — generation, quality control, asset processing and automated publishing
+- **AI content systems** — generation, GPU/ComfyUI pipelines, quality control, asset processing and automated publishing
 
 ## Featured Projects
 
@@ -122,7 +122,7 @@ user balance + referral reward
 
 **Highlights:** multilingual UI · payments · token balance · referral system · PostgreSQL state · Redis queue · asynchronous GPU generation · ComfyUI · webhooks · object storage
 
-**Public release:** NDA-safe portfolio version in progress; production identities, endpoints, credentials, pricing and commercial coefficients are excluded.
+**Public release:** complete NDA-safe portfolio version — **3 sanitized workflows / 213 nodes** plus architecture, data-model, setup and security documentation. Production identities, endpoints, credentials, pricing and commercial coefficients are excluded.
 
 ---
 
